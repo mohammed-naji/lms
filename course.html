@@ -349,6 +349,13 @@
                     </div>
                 </div>
 
+                <div class="modal">
+                    <div class="modal-content">
+                        <div class="modal-close">x</div>
+                        <video width="100%" oncontextmenu="return false;" controls="controls" controlslist="nodownload" src="https://bakkah.com/public/upload/video/2021-08-17-18-22-57-intro_video-prince2 - intro v2.mp4" class="embed-responsive-item"></video>
+                    </div>
+                </div>
+
                 <div class="row mt-3 course-content">
                     <div class="col-12">
                         <h3>CONTENT</h3>
@@ -941,8 +948,33 @@
         </div>
     </div>
 
-
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+
+    <script>
+        var btn = document.getElementsByClassName('video-btn');
+        var modal = document.getElementsByClassName('modal');
+        var content = document.getElementsByClassName('modal-content');
+        var close = document.getElementsByClassName('modal-close');
+
+        btn[0].addEventListener('click', e => {
+            modal[0].getElementsByTagName('video')[0].play();
+            modal[0].classList.add("show");
+        });
+
+        close[0].addEventListener('click', e => {
+            modal[0].getElementsByTagName('video')[0].pause();
+            modal[0].classList.remove("show");
+        });
+
+        modal[0].addEventListener('click', e => {
+            modal[0].getElementsByTagName('video')[0].pause();
+            modal[0].classList.remove("show");
+        });
+
+        content[0].addEventListener('click', e => e.stopPropagation())
+    </script>
+
 </body>
 
 </html>
