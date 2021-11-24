@@ -69,26 +69,35 @@ body {
   /* Behind the navbar */
   padding: 70px 0 0;
   /* Height of navbar */
-  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
-}
-
-@media (max-width: 767.98px) {
-  .sidebar {
-      top: 5rem;
-  }
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
 }
 
 .navbar-brand {
-  padding-top: .75rem;
-  padding-bottom: .75rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
   font-size: 1rem;
-  background-color: rgba(0, 0, 0, .25);
-  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+  background-color: rgba(0, 0, 0, 0.25);
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.25);
 }
 
 .navbar .navbar-toggler {
-  top: .25rem;
+  top: 0.25rem;
   right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  border: 1px solid #a6a6a6;
+  box-sizing: content-box;
+  border-radius: 3px;
+}
+
+.navbar .navbar-toggler svg {
+  width: 24px;
+  height: 20px;
 }
 
 /* Customize the label (the checkbox-lable) */
@@ -192,7 +201,7 @@ body {
 }
 
 /* On mouse-over, add a grey background color */
-.custom-radio:hover input~.radio-mark {
+.custom-radio:hover input ~ .radio-mark {
   background-color: rgb(226, 226, 226);
 }
 
@@ -209,7 +218,7 @@ body {
 }
 
 /* Show the indicator (dot/circle) when checked */
-.custom-radio input:checked~.radio-mark:after {
+.custom-radio input:checked ~ .radio-mark:after {
   display: block;
 }
 
@@ -219,7 +228,7 @@ body {
   top: 5px;
   width: 5px;
   height: 10px;
-  border: solid #06AE60;
+  border: solid #06ae60;
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -236,6 +245,16 @@ body {
   border-radius: 50%;
   margin: 0 5px;
   box-sizing: unset;
+  transition: all .15s ease;
+}
+
+.social-media a:hover {
+  background: var(--mainColor);
+  border-color: var(--mainColor);
+}
+
+.social-media a:hover path {
+  fill: #fff;
 }
 
 .shadow {
@@ -255,7 +274,7 @@ body {
 }
 
 .light {
-  font-family: 'Lato Light';
+  font-family: "Lato Light";
 }
 
 .text-black {
@@ -305,6 +324,11 @@ ol {
   background-color: var(--mainColor);
 }
 
+.btn-primary:hover {
+  color: #fff;
+  background-color: var(--secondColor);
+}
+
 .bg-dark {
   background: #212529;
 }
@@ -318,23 +342,23 @@ ol {
 }
 
 .bg-main {
-  background: var(--mainColor)
+  background: var(--mainColor);
 }
 
 .bg-second {
-  background: var(--secondColor)
+  background: var(--secondColor);
 }
 
 .bg-third {
-  background: var(--thirdColor)
+  background: var(--thirdColor);
 }
 
 .bg-fourth {
-  background: var(--fourthColor)
+  background: var(--fourthColor);
 }
 
 .bg-gray {
-  background: #ADADAD;
+  background: #adadad;
 }
 
 .form-control {
@@ -361,6 +385,14 @@ img {
 
 .w-100 {
   width: 100%;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.w-30 {
+  width: 30%;
 }
 
 .w-50 {
@@ -526,8 +558,8 @@ nav#sidebarMenu ul li a {
   transition: all 0.15s ease-in-out;
 }
 
-nav#sidebarMenu ul li a:hover ,
-nav#sidebarMenu ul li a.active{
+nav#sidebarMenu ul li a:hover,
+nav#sidebarMenu ul li a.active {
   background: #5d5b5a;
   border-color: #fff;
   color: #fff;
@@ -583,7 +615,6 @@ nav#sidebarMenu ul li a svg path {
   right: -15px;
   top: 0;
 }
-
 
 .lms-header ul.navbar-nav li a.nav-link {
   display: flex;
@@ -666,7 +697,10 @@ ol.breadcrumb li {
   position: relative;
 }
 
-ol.breadcrumb li:not(:last-child):after {content: '/';margin-left: 10px;}
+ol.breadcrumb li:not(:last-child):after {
+  content: "/";
+  margin-left: 10px;
+}
 
 ol.breadcrumb li a {
   color: #000;
@@ -676,7 +710,7 @@ ol.breadcrumb li a {
   font-size: 40px;
   margin: 0;
   margin-top: 15px;
-  font-family: 'Lato Black';
+  font-family: "Lato Black";
 }
 
 .card {
@@ -728,14 +762,14 @@ p.time-remaining svg {
   background: var(--mainColor);
   color: #fff;
   font-size: 18px;
-  font-family: 'Lato Black';
+  font-family: "Lato Black";
   text-align: center;
   border-bottom-left-radius: 5px;
 }
 
 .q-number small {
   display: block;
-  font-family: 'Lato Regular';
+  font-family: "Lato Regular";
   font-size: 70%;
 }
 .q-card h3 {
@@ -763,18 +797,18 @@ p.time-remaining svg {
   left: 7px;
   width: 4px;
 }
-.q-card label:hover input~.radio-mark {
+.q-card label:hover input ~ .radio-mark {
   background-color: rgb(243, 243, 243);
 }
 
-.custom-radio input:checked~.radio-mark:after {
+.custom-radio input:checked ~ .radio-mark:after {
   display: block;
 }
 
 .q-card .btn {
   border: 1px solid var(--mainColor);
   padding: 5px 20px;
-  transition: all .15s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 
 .q-card .btn:hover {
@@ -795,7 +829,7 @@ p.time-remaining svg {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: all .15s ease-in-out;
+  transition: all 0.15s ease-in-out;
 }
 .q-card .navigation button:hover {
   background: #eee;
@@ -816,13 +850,13 @@ ol.answers li {
   text-align: center;
   padding: 5px;
   border-radius: 5px;
-  box-shadow: 0 3px 6px rgba(0,0,0,.16);
-  font-family: 'Lato Light';
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  font-family: "Lato Light";
 }
 
 ol.answers li .icon {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -831,15 +865,15 @@ ol.answers li .icon {
 }
 
 ol.answers li .icon.correct {
-  background: #06AE60;
+  background: #06ae60;
 }
 
 ol.answers li .icon.incorrect {
-  background: #FF0000;
+  background: #ff0000;
 }
 
 ol.answers li .icon.empty {
-  background: #FFDD00;
+  background: #ffdd00;
 }
 
 .course-image {
@@ -853,7 +887,7 @@ ol.answers li .icon.empty {
   width: 80%;
   margin: 0 auto;
   height: 4px;
-  background: #F7F7F7;
+  background: #f7f7f7;
 }
 
 .course-image .progress .bar {
@@ -901,25 +935,25 @@ ol.answers li .icon.empty {
   margin-bottom: 15px;
 }
 
-.course-content .course-group .persons  {
+.course-content .course-group .persons {
   width: 63%;
 }
 
 .course-content .course-group .persons ul {
-    display: flex;
+  display: flex;
 }
 
 .course-content .course-group .persons ul li {
-    width: 32px;
-    height: 32px;
-    box-sizing: content-box;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 1px solid #F3F3F3;
+  width: 32px;
+  height: 32px;
+  box-sizing: content-box;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #f3f3f3;
 }
 
 .course-content .course-group .persons ul li img {
@@ -929,15 +963,15 @@ ol.answers li .icon.empty {
 }
 
 .course-content .course-group .persons ul li:not(:first-child) {
-    margin-left: -8px;
+  margin-left: -8px;
 }
 
 .course-content .course-group .persons ul li:nth-child(odd) {
-    position: relative;
+  position: relative;
 }
 
-.course-content .course-group .persons ul li:last-child  {
-    background: #595959
+.course-content .course-group .persons ul li:last-child {
+  background: #595959;
 }
 
 .new-students {
@@ -964,7 +998,7 @@ ol.answers li .icon.empty {
 
 .learning-file h2 {
   margin: 20px 30px;
-  font-family: 'Lato Black';
+  font-family: "Lato Black";
   font-size: 18px;
 }
 
@@ -986,7 +1020,7 @@ ol.answers li .icon.empty {
 }
 
 .learning-file ul li a:hover {
-  background: #F9F9F9;
+  background: #f9f9f9;
   color: var(--mainColor);
 }
 
@@ -998,7 +1032,15 @@ ol.answers li .icon.empty {
   position: relative;
 }
 
-.line-chart:after {content: '';position: absolute;width: 96%;height: 1px;background: #D3D3D3;bottom: 23px;left: 2%;}
+.line-chart:after {
+  content: "";
+  position: absolute;
+  width: 96%;
+  height: 1px;
+  background: #d3d3d3;
+  bottom: 23px;
+  left: 2%;
+}
 
 ul.video-list li {
   display: flex;
@@ -1008,7 +1050,7 @@ ul.video-list li {
 ul.video-list li .play {
   width: 50px;
   height: 50px;
-  background: #8C8C8C;
+  background: #8c8c8c;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1055,7 +1097,7 @@ ul.video-list li .text p {
 .course-cards > div b {
   display: block;
   font-size: 35px;
-  font-family: 'Lato Black';
+  font-family: "Lato Black";
 }
 
 .course-cards > div {
@@ -1069,8 +1111,8 @@ ul.badges {
 }
 
 ul.badges li {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   margin: 2%;
   display: flex;
   justify-content: center;
@@ -1079,7 +1121,7 @@ ul.badges li {
 }
 
 ul.badges li svg {
-  height: 50px;
+  height: 35px;
 }
 
 .awward-level img {
@@ -1119,3 +1161,262 @@ ul.badges li svg {
   font-size: 12px;
   margin: 0 5px;
 }
+
+.calendar {
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.195s ease;
+  transform-style: preserve-3d;
+}
+
+.calendar.is-rotated-left {
+  transform: translate(-50%, -50%) rotateY(-4deg);
+}
+
+.calendar.is-rotated-right {
+  transform: translate(-50%, -50%) rotateY(4deg);
+}
+
+.calendar .sideb,
+.calendar .right-wrapper {
+  background-color: white;
+  width: 100%;
+  float: left;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.calendar .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.calendar .header i {
+  padding: 0 5px;
+  cursor: pointer;
+}
+
+.calendar .header svg {
+  height: 15px;
+}
+
+.calendar .header span {
+  display: inline-block;
+  margin: 0 3px;
+  font-weight: 700;
+}
+
+.calendar .right-wrapper {
+  background-color: var(--mainColor);
+  color: white;
+  transform-origin: left center;
+  transform: rotateY(110deg);
+  transition: all 0.5s;
+}
+
+.calendar .right-wrapper.is-active {
+  transform: rotateY(0deg);
+}
+
+.calendar .right-wrapper .header {
+  text-align: left;
+  justify-content: center;
+}
+
+.calendar .right-wrapper .day {
+  font-size: 12em;
+  text-indent: -12px;
+  display: block;
+}
+
+.calendar .right-wrapper .month {
+  font-size: 2.5em;
+}
+
+.calendar .sideb .showDate {
+  color: white;
+  text-align: right;
+  width: 100%;
+}
+
+.calendar .sideb .showDate i {
+  cursor: pointer;
+  background: var(--mainColor);
+  border-radius: 4px;
+  padding: 8px 12px;
+  transform: scale(1);
+  transition: all 0.3s;
+}
+
+.calendar .sideb .showDate i.is-active {
+  transform: scale(-1);
+}
+
+.calendar .sideb table {
+  text-align: center;
+
+  width: 90%;
+  margin: 30px auto 0;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.calendar .sideb table tbody:before {
+  content: "-";
+  display: block;
+  line-height: 0.75em;
+  color: transparent;
+}
+
+.calendar .sideb table th {
+  color: var(--mainColor);
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.calendar .sideb table td {
+  padding: 15px 5px;
+  color: #ced0ce;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.calendar .sideb table td::before {
+  content: "";
+  display: none;
+  width: 50%;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, -8px);
+  background-color: var(--mainColor);
+}
+
+.calendar .sideb table td.currentDay::before {
+  display: block;
+}
+
+.calendar .sideb table td.selectable {
+  color: #303633;
+  cursor: pointer;
+}
+
+.calendar .sideb table td.selectable:hover,
+.calendar .sideb table td.currentDay {
+  background: var(--mainColor);
+  color: white;
+}
+
+.calendar .sideb table td.between {
+  background-color: #333;
+  color: white;
+}
+
+.calendar .sideb table td.active,
+.calendar .sideb table td.hover {
+  background: var(--mainColor);
+  color: white;
+}
+
+/* Responsive Media */
+
+@media (max-width: 767.98px) {
+  .sidebar {
+    /* top: 4rem; */
+    width: 90%;
+    left: -90%;
+    transition: all 0.2s ease;
+  }
+
+  .sidebar.show {
+    left: 0;
+  }
+
+  .course-image {
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576.98px) {
+  .lms-header ul.navbar-nav {
+    /* width: 100%;
+    padding: 10px 0;
+    justify-content: center; */
+    margin: 0 10px;
+  }
+  .lms-header a.navbar-brand {
+    padding: 12px 0 !important;
+  }
+  .lms-header ul.navbar-nav li a.nav-link {
+    width: 30px;
+    height: 30px;
+  }
+  .lms-header ul.navbar-nav li a svg {
+    width: 14px;
+  }
+  .lms-header ul.navbar-nav > li {
+    margin: 0 10px;
+  }
+  .lms-header ul.navbar-nav > li:not(:last-child):after {
+    right: -10px;
+  }
+  .navbar .navbar-toggler {
+    width: 30px;
+    height: 25px;
+  }
+
+  .navbar .navbar-toggler svg {
+    width: 20px;
+  }
+  .course-cards {
+    width: 100%;
+    justify-content: center;
+  }
+  .course-cards > div {
+    width: 120px;
+  }
+  .calendar .sideb table th {
+    font-size: 14px;
+  }
+  ul.badges li {
+    width: 60px;
+    height: 60px;
+  }
+  ul.badges li svg {
+    height: 26px;
+  }
+  .course-image {
+    width: 100%;
+    margin: 0 auto;
+  }
+  ol.breadcrumb li {
+    margin-right: 8px;
+  }
+}
+/* 
+@media (min-width: 991px) and (max-width: 1200px) {
+  ol.answers li {
+    width: 47%;
+  }
+} */
+
+
+/* @media (max-width: 768px) { ... }
+
+@media (max-width: 992px) { ... }
+
+@media (max-width: 1200px) { ... }
+
+@media (max-width: 1400px) { ... } */

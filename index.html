@@ -9,187 +9,28 @@
     <meta name="generator" content="Hugo 0.88.1">
     <title>LMS</title>
 
+    <link rel="icon" href="assets/images/logo.png">
+
     <link rel="stylesheet" href="assets/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <style>
-        .main {
-            width: 100%;
-            box-sizing: border-box;
-            transition: all 0.195s ease;
-            transform-style: preserve-3d;
-        }
-
-        .main.is-rotated-left {
-            transform: translate(-50%, -50%) rotateY(-4deg);
-        }
-
-        .main.is-rotated-right {
-            transform: translate(-50%, -50%) rotateY(4deg);
-        }
-
-        .main .sideb,
-        .main .right-wrapper {
-            background-color: white;
-            width: 100%;
-            float: left;
-            height: 100%;
-            box-sizing: border-box;
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-        }
-
-        .main .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-        }
-
-        .main .header i {
-            padding: 0 5px;
-            cursor: pointer;
-        }
-
-        .main .header svg {
-            height: 15px;
-        }
-
-        .main .header span {
-            display: inline-block;
-            margin: 0 3px;
-            font-weight: 700;
-        }
-
-        .main .right-wrapper {
-            background-color: var(--mainColor);
-            color: white;
-            transform-origin: left center;
-            transform: rotateY(110deg);
-            transition: all 0.5s;
-        }
-
-        .main .right-wrapper.is-active {
-            transform: rotateY(0deg);
-        }
-
-        .main .right-wrapper .header {
-            text-align: left;
-            justify-content: center;
-        }
-
-        .main .right-wrapper .day {
-            font-size: 12em;
-            text-indent: -12px;
-            display: block;
-        }
-
-        .main .right-wrapper .month {
-            font-size: 2.5em;
-        }
-
-        .main .sideb .showDate {
-            color: white;
-            text-align: right;
-            width: 100%;
-        }
-
-        .main .sideb .showDate i {
-            cursor: pointer;
-            background: var(--mainColor);
-            border-radius: 4px;
-            padding: 8px 12px;
-            transform: scale(1);
-            transition: all 0.3s;
-        }
-
-        .main .sideb .showDate i.is-active {
-            transform: scale(-1);
-        }
-
-        .main .sideb table {
-            text-align: center;
-
-            width: 90%;
-            margin: 30px auto 0;
-            table-layout: fixed;
-            border-collapse: collapse;
-        }
-
-        .main .sideb table tbody:before {
-            content: "-";
-            display: block;
-            line-height: 0.75em;
-            color: transparent;
-        }
-
-        .main .sideb table th {
-            color: var(--mainColor);
-            font-size: 16px;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
-
-        .main .sideb table td {
-            padding: 20px 5px;
-            color: #ced0ce;
-            transition: all 0.3s;
-            position: relative;
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-        .main .sideb table td::before {
-            content: "";
-            display: none;
-            width: 50%;
-            height: 2px;
-            position: absolute;
-            left: 50%;
-            top: 100%;
-            transform: translate(-50%, -8px);
-            background-color: var(--mainColor);
-        }
-
-        .main .sideb table td.currentDay::before {
-            display: block;
-        }
-
-        .main .sideb table td.selectable {
-            color: #303633;
-            cursor: pointer;
-        }
-
-        .main .sideb table td.selectable:hover,
-        .main .sideb table td.currentDay {
-            background: var(--mainColor);
-            color: white;
-        }
-
-        .main .sideb table td.between {
-            background-color: #333;
-            color: white;
-        }
-
-        .main .sideb table td.active,
-        .main .sideb table td.hover {
-            background: var(--mainColor);
-            color: white;
-        }
-    </style>
 </head>
 
 <body>
 
     <header class="navbar navbar-dark sticky-top bg-white flex-md-nowrap p-0 shadow lms-header">
-        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#"><img src="assets/images/logo.png" alt=""> BAKKAH
-            <b>LMS</b></a>
-        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
+        <a class="navbar-brand col-md-3 col-lg-3 col-xl-2 me-0 px-3" href="#"><img src="assets/images/logo.png" alt=""> <span class="d-none d-sm-block">BAKKAH
+            <b>LMS</b></span></a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed  me-auto ms-3" type="button" data-bs-toggle="collapse"
             data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
             aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="85.08" height="63.677" viewBox="0 0 85.08 63.677">
+                <g id="Menu-01" transform="translate(-7.46 -20.133)">
+                  <path id="Path_462" data-name="Path 462" d="M7.47,24.45a14.117,14.117,0,0,1,1.04-2.14,4.912,4.912,0,0,1,4.17-2.17q37.32-.015,74.65,0a5.212,5.212,0,0,1,4.89,3.46c.1.28.21.56.32.84v1.99c-.11.28-.22.56-.32.84a5.245,5.245,0,0,1-4.89,3.47H12.68a5.236,5.236,0,0,1-4.89-3.46c-.1-.28-.21-.56-.32-.84C7.47,25.77,7.47,25.11,7.47,24.45Z"/>
+                  <path id="Path_463" data-name="Path 463" d="M92.53,52.97c-.11.28-.22.56-.32.84a5.245,5.245,0,0,1-4.89,3.47H12.67a5.236,5.236,0,0,1-4.89-3.46c-.1-.28-.21-.56-.32-.84V50.99c.1-.26.2-.51.29-.77a5.241,5.241,0,0,1,5-3.54H87.24a5.232,5.232,0,0,1,5,3.54c.09.26.19.51.29.76Z"/>
+                  <path id="Path_464" data-name="Path 464" d="M92.53,79.5c-.11.28-.22.56-.32.84a5.245,5.245,0,0,1-4.89,3.47H12.67a5.236,5.236,0,0,1-4.89-3.46c-.1-.28-.21-.56-.32-.84V77.52c.1-.26.2-.51.29-.77a5.241,5.241,0,0,1,5-3.54H87.24a5.232,5.232,0,0,1,5,3.54c.09.26.19.51.29.76Z"/>
+                </g>
+              </svg>
+              
         </button>
 
         <ul class="navbar-nav">
@@ -216,7 +57,7 @@
                             transform="translate(0.039)" />
                     </svg>
                 </a>
-                <div class="dropdown">
+                <div class="dropdown d-none">
                     <ul>
                         <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
                         <li><a href="#">Lorem, ipsum dolor.</a></li>
@@ -237,7 +78,7 @@
 
     <div class="container-fluid">
         <div class="row">
-            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-3 col-xl-2 d-md-block bg-light sidebar collapse">
                 <div class="position-sticky pt-3">
 
                     <div class="person-wrapper">
@@ -292,7 +133,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="files.html">
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                     width="32" height="41" viewBox="0 0 32 41">
                                     <defs>
@@ -320,7 +161,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="course.html">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="38" height="31.667"
                                     viewBox="0 0 38 31.667">
                                     <path id="Path_133" data-name="Path 133"
@@ -425,18 +266,18 @@
                 </div>
             </nav>
 
-            <main class="col-md-9 ms-sm-auto col-lg-10 p-5">
+            <main class="col-md-9 ms-sm-auto col-lg-9 col-xl-10 p-3 p-sm-5">
 
                 <div class="card p-30 mb-5">
                     <div class="row align-items-center">
-                        <div class="col-md-8">
+                        <div class="col-lg-8">
                             <h2 class="mt-0">Hi, Ahmed</h2>
                             <p class="lead">Lean Six Sigma Yellow belt training provides insight to the methodology for
                                 process improvement, tools and techniques of Six Sigma. In this course, you’ll
                                 understand how </p>
                             <a href="#" class="btn btn-primary px-5">Resume Course</a>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-lg-4 mt-4 mt-lg-0">
                             <img src="assets/images/dash.png" alt="">
                         </div>
                     </div>
@@ -445,7 +286,7 @@
                 <div class="card p-30 mb-5">
                     <h3 class="mb-5">Course Overview</h3>
                     <div class="row">
-                        <div class="col-md-3 mb-4">
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4">
                             <div class="text-center course-image p-30">
                                 <img src="assets/images/CAPM.png" alt="">
                                 <div class="progress">
@@ -455,7 +296,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-3 mb-4">
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4">
                             <div class="text-center course-image p-30">
                                 <img src="assets/images/CAPM.png" alt="">
                                 <div class="progress">
@@ -465,7 +306,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-3 mb-4">
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4">
                             <div class="text-center course-image p-30">
                                 <img src="assets/images/CAPM.png" alt="">
                                 <div class="progress">
@@ -475,7 +316,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-3 mb-4">
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4">
                             <div class="text-center course-image p-30">
                                 <img src="assets/images/CAPM.png" alt="">
                                 <div class="progress">
@@ -488,7 +329,7 @@
                 </div>
 
                 <div class="row mb-5">
-                    <div class="col-md-6 d-flex flex-column justify-content-between">
+                    <div class="col-xl-6 d-flex flex-column justify-content-between mb-4 mb-xl-0">
                         <div class="card p-30 mb-4">
                             <h3>Badges</h3>
                             <ul class="badges">
@@ -575,6 +416,21 @@
                                     </svg>
 
                                 </li>
+                                <li class="bg-fourth">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="56.801" height="56.825" viewBox="0 0 56.801 56.825">
+                                        <g id="Group_23" data-name="Group 23" transform="translate(0 0)">
+                                          <path id="Path_29" data-name="Path 29" d="M5.263,18.095l2.653,2.323A17.81,17.81,0,0,0,6.7,22.85a12.407,12.407,0,0,1-2.046,3.209,8.061,8.061,0,0,1-3.7,1.825,28.621,28.621,0,0,1-7.185.719H-8V26.832q0-6.193,1.217-8.626a9.106,9.106,0,0,1,4.422-3.982A20.265,20.265,0,0,0,.51,12.565l2.1,2.765A20.181,20.181,0,0,1-.817,17.32a5.968,5.968,0,0,0-2.707,2.323q-.72,1.328-.94,5.42A12.928,12.928,0,0,0,.179,24.4a5.62,5.62,0,0,0,2.155-1.273A13.765,13.765,0,0,0,3.6,21.081a14.859,14.859,0,0,1,1.659-2.986M38.1-10.274a6.864,6.864,0,0,1-2.1,5.032,6.864,6.864,0,0,1-5.03,2.1,6.855,6.855,0,0,1-5.029-2.1,6.858,6.858,0,0,1-2.1-5.032,6.866,6.866,0,0,1,2.1-5.032,6.861,6.861,0,0,1,5.029-2.1,6.87,6.87,0,0,1,5.03,2.1,6.872,6.872,0,0,1,2.1,5.032m-3.538,0a3.471,3.471,0,0,0-1.049-2.544,3.473,3.473,0,0,0-2.544-1.05,3.469,3.469,0,0,0-2.542,1.05,3.466,3.466,0,0,0-1.05,2.544,3.464,3.464,0,0,0,1.05,2.544,3.463,3.463,0,0,0,2.542,1.05,3.466,3.466,0,0,0,2.544-1.05,3.468,3.468,0,0,0,1.049-2.544m14.1-12.442a44.069,44.069,0,0,1-.442,7.52A37.316,37.316,0,0,1,46.275-6.68a21.558,21.558,0,0,1-5.969,8.737A20.357,20.357,0,0,1,37.156,4.27q-2.048,1.219-5.2,2.821T27.815,9.248q-3.539,1.991-3.87,2.211v9.18a1.674,1.674,0,0,1-.663,1.327L16.76,28.49a1.9,1.9,0,0,1-1.217.444,1.845,1.845,0,0,1-.552-.11,1.672,1.672,0,0,1-1.1-1.217l-2.211-9.18L7.7,14q-3.1-3.428-3.87-4.313l-10.5-2.434A1.711,1.711,0,0,1-8,6.1,1.637,1.637,0,0,1-7.67,4.38L-1.149-2.7A1.812,1.812,0,0,1,.179-3.25h9.838q.663-1.106,2.1-4.092,4.531-8.96,6.412-11.17a22.464,22.464,0,0,1,8.953-6.526,47.487,47.487,0,0,1,9.342-2.267,38.018,38.018,0,0,1,7.241-.554,15.4,15.4,0,0,0,2.874.056A1.607,1.607,0,0,1,48.6-26.145a22.2,22.2,0,0,0,.056,3.429m-3.593-1.66a47.261,47.261,0,0,0-16.25,2.655,18.981,18.981,0,0,0-7.627,5.53q-1.551,1.882-5.86,10.508Q13.334-1.811,12.559-.6a1.731,1.731,0,0,1-1.548.884H.952l-3.98,4.2L5.153,6.372a1.422,1.422,0,0,1,.884.552q.552.554,8.623,9.512a2.492,2.492,0,0,1,.331.773l1.659,6.747,3.758-4.092V10.575a1.591,1.591,0,0,1,.554-1.327q.663-.554,5.085-3.1Q27.04,5.6,29.97,4.1T34.945,1.45A14.316,14.316,0,0,0,37.875-.6a17.755,17.755,0,0,0,5.085-7.3q2.322-6.3,2.1-16.48" transform="translate(8.113 27.891)" fill="#fff"/>
+                                        </g>
+                                      </svg>                                      
+
+                                </li>
+                                <li class="bg-gray">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="51.651" height="54.984" viewBox="0 0 51.651 54.984">
+                                        <g id="Group_26" data-name="Group 26" transform="translate(0 0)">
+                                          <path id="Path_31" data-name="Path 31" d="M25.465,13.022,34.214,2.086a2.5,2.5,0,0,0,.3-2.643,2.507,2.507,0,0,0-2.254-1.417H11.434V-6.139A2.5,2.5,0,0,0,10.7-7.9a2.5,2.5,0,0,0-1.768-.732H-14.392a2.5,2.5,0,0,0-2.5,2.5V43.847a2.5,2.5,0,0,0,2.5,2.5,2.5,2.5,0,0,0,2.5-2.5V21.352H6.437v4.165a2.5,2.5,0,0,0,2.5,2.5H32.261a2.5,2.5,0,0,0,1.953-4.06Zm-37.357,3.333V-3.639H6.437V16.355ZM11.434,23.02V3.026l15.628,0L20.312,11.46a2.5,2.5,0,0,0,0,3.125l6.751,8.436Z" transform="translate(16.89 8.637)" fill="#fff"/>
+                                        </g>
+                                      </svg>
+                                </li>
                             </ul>
                         </div>
                         <div class="card p-30">
@@ -593,8 +449,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="card h-100 main">
+                    <div class="col-xl-6">
+                        <div class="card h-100 calendar">
                             <div class="sideb">
                                 <div class="header">
                                     <i class="fa fa-angle-left" aria-hidden="true">
@@ -694,7 +550,7 @@
                 </div>
 
                 <div class="row mb-5">
-                    <div class="col-md-6">
+                    <div class="col-xl-6 mb-5 mb-xl-0">
                         <div class="card p-30">
                             <div class="line-chart">
                                 <h3>Learning Time Overview</h3>
@@ -702,10 +558,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-xl-6">
                         <div class="card h-100 justify-content-center p-30">
                             
-                            <div class="d-flex flex-wrap">
+                            <div class="d-flex flex-column flex-sm-row flex-wrap">
                                 <div class="course-cards bg-main">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="71.3" height="62.387" viewBox="0 0 71.3 62.387">
                                         <path id="Icon_open-task" data-name="Icon open-task" d="M0,0V62.387H62.387v-32L53.475,39.3V53.475H8.912V8.912h32L49.821,0ZM62.387,0,35.65,26.737l-8.912-8.912-8.912,8.912L35.65,44.562,71.3,8.912Z" fill="#fff"/>
@@ -739,17 +595,19 @@
                                 </div>
     
                                 <div class="course-cards bg-gray">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="70.07" height="119.476" viewBox="0 0 70.07 119.476">
-                                        <g id="Group_178" data-name="Group 178" transform="translate(-449.23 92.166)">
-                                          <path id="Path_165" data-name="Path 165" d="M518.019-52.117,503.133-90a2.236,2.236,0,0,0-2.082-1.419H466.6a2.253,2.253,0,0,0-.563.075,2.227,2.227,0,0,0-.242.091,2.4,2.4,0,0,0-.321.15c-.073.044-.14.091-.208.141a2.284,2.284,0,0,0-.293.267,2.018,2.018,0,0,0-.14.154c-.018.022-.04.039-.057.062a2.242,2.242,0,0,0-.256.474v0l-14.3,36.248a2.237,2.237,0,0,0,1.115,2.839L482.3-36.094V-32.3a2.238,2.238,0,0,0,2.238,2.238,2.238,2.238,0,0,0,2.237-2.238v-3.742L516.837-49.25A2.239,2.239,0,0,0,518.019-52.117Zm-62.868-1.932,11.317-28.692,14.2,40.9ZM485.86-40.528l-7.031-20.254-9.081-26.159h29.779l13.54,34.459Z" transform="translate(0 0)" fill="#fff" stroke="#fff" stroke-width="1.5"/>
-                                          <g id="Group_176" data-name="Group 176" transform="translate(450.562 -32.891)">
-                                            <path id="Path_166" data-name="Path 166" d="M500.358,20.347H468.617a2.237,2.237,0,0,1-1.938-1.119L450.809-8.26a2.239,2.239,0,0,1,0-2.238L466.68-37.985a2.237,2.237,0,0,1,1.938-1.119h31.741a2.236,2.236,0,0,1,1.938,1.119L518.166-10.5a2.239,2.239,0,0,1,0,2.238L502.3,19.228A2.236,2.236,0,0,1,500.358,20.347Zm-30.448-4.475h29.157L513.644-9.378,499.067-34.629H469.909L455.331-9.378Z" transform="translate(-450.509 39.104)" fill="#fff" stroke="#fff" stroke-width="1.5"/>
-                                          </g>
-                                          <g id="Group_177" data-name="Group 177" transform="translate(464.858 -23.065)">
-                                            <path id="Path_167" data-name="Path 167" d="M493.751,7.334a2.238,2.238,0,0,1-1.042-.257L482.97,1.956l-9.74,5.121a2.237,2.237,0,0,1-3.247-2.358l1.86-10.846-7.879-7.68A2.236,2.236,0,0,1,463.4-16.1a2.239,2.239,0,0,1,1.807-1.523l10.889-1.583,4.87-9.866a2.238,2.238,0,0,1,2.007-1.247h0a2.237,2.237,0,0,1,2.006,1.247l4.87,9.866,10.889,1.583a2.236,2.236,0,0,1,1.807,1.523,2.238,2.238,0,0,1-.566,2.293L494.1-6.128,495.9,4.409a2.24,2.24,0,0,1-2.13,2.926A.147.147,0,0,0,493.751,7.334ZM470.334-13.848l5.475,5.338a2.237,2.237,0,0,1,.644,1.98L475.16,1.007l6.769-3.559a2.245,2.245,0,0,1,2.082,0l6.769,3.559L489.487-6.53a2.236,2.236,0,0,1,.643-1.98l5.475-5.338-7.567-1.1a2.241,2.241,0,0,1-1.685-1.224l-3.383-6.857-3.384,6.857a2.241,2.241,0,0,1-1.685,1.224Z" transform="translate(-463.288 30.321)" fill="#fff" stroke="#fff" stroke-width="0.5"/>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="85.644" height="75.049" viewBox="0 0 85.644 75.049">
+                                        <g id="Group_178" data-name="Group 178" transform="translate(-448.032 56.166)">
+                                          <g id="Group_319" data-name="Group 319" transform="translate(448.818 -55.416)">
+                                            <g id="Group_176" data-name="Group 176" transform="translate(0 0)">
+                                              <path id="Path_166" data-name="Path 166" d="M512.178,34.445H472.911a2.768,2.768,0,0,1-2.4-1.384L450.88-.946a2.77,2.77,0,0,1,0-2.768L470.514-37.72a2.768,2.768,0,0,1,2.4-1.384h39.267a2.766,2.766,0,0,1,2.4,1.384L534.21-3.714a2.77,2.77,0,0,1,0,2.768L514.576,33.061A2.766,2.766,0,0,1,512.178,34.445ZM474.51,28.909h36.071L528.615-2.33,510.581-33.568H474.51L456.474-2.33Z" transform="translate(-450.509 39.104)" fill="#fff" stroke="#fff" stroke-width="1.5"/>
+                                            </g>
+                                            <g id="Group_177" data-name="Group 177" transform="translate(17.687 12.156)">
+                                              <path id="Path_167" data-name="Path 167" d="M500.974,16.264a2.769,2.769,0,0,1-1.289-.318L487.638,9.61l-12.05,6.335a2.767,2.767,0,0,1-4.016-2.918l2.3-13.418-9.748-9.5a2.766,2.766,0,0,1-.7-2.837,2.77,2.77,0,0,1,2.235-1.884l13.471-1.958,6.025-12.206a2.769,2.769,0,0,1,2.483-1.543h0a2.767,2.767,0,0,1,2.482,1.543l6.025,12.206,13.471,1.958a2.766,2.766,0,0,1,2.235,1.884,2.768,2.768,0,0,1-.7,2.837L501.4-.391l2.235,13.035A2.771,2.771,0,0,1,501,16.264.182.182,0,0,0,500.974,16.264ZM472-9.942l6.774,6.6a2.767,2.767,0,0,1,.8,2.45l-1.6,9.324,8.374-4.4a2.778,2.778,0,0,1,2.576,0l8.374,4.4L495.7-.889a2.766,2.766,0,0,1,.8-2.45l6.774-6.6L493.908-11.3a2.773,2.773,0,0,1-2.084-1.514L487.638-21.3l-4.187,8.483a2.773,2.773,0,0,1-2.084,1.514Z" transform="translate(-463.288 30.321)" fill="#fff" stroke="#fff" stroke-width="0.5"/>
+                                            </g>
                                           </g>
                                         </g>
                                       </svg>
+                                      
                                       
                                     <div>
                                         <span>Your Points</span>
@@ -763,7 +621,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
                         <div class="card h-100 p-30">
                             <h3>Last Video View</h3>
                             <div class="h-100 d-flex justify-content-center align-items-center video-btn">
@@ -776,7 +634,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-lg-6">
                         <div class="card p-30">
                             <h3>Next Videos</h3>
                             <ul class="video-list">
