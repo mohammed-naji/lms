@@ -264,7 +264,7 @@
                 </div>
             </nav>
 
-            <main class="col-md-9 ms-sm-auto col-lg-9 col-xl-10 p-2 p-sm-5">
+            <main class="col-md-9 ms-sm-auto col-lg-9 col-xl-10 p-3 p-sm-5">
 
 
                 <div class="dash-header course-header d-flex align-items-md-center flex-column flex-md-row">
@@ -948,31 +948,30 @@
         </div>
     </div>
 
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-
+    <script src="assets/js/main.js"></script>
 
     <script>
-        var btn = document.getElementsByClassName('video-btn');
-        var modal = document.getElementsByClassName('modal');
-        var content = document.getElementsByClassName('modal-content');
-        var close = document.getElementsByClassName('modal-close');
+        var btn = document.querySelector('.video-btn');
+        var modal = document.querySelector('.modal');
+        var content = document.querySelector('.modal-content');
+        var close = document.querySelector('.modal-close');
 
-        btn[0].addEventListener('click', e => {
-            modal[0].getElementsByTagName('video')[0].play();
-            modal[0].classList.add("show");
-        });
+        btn.onclick = e => {
+            modal.querySelector('video').play();
+            modal.classList.add("show");
+        };
 
-        close[0].addEventListener('click', e => {
-            modal[0].getElementsByTagName('video')[0].pause();
-            modal[0].classList.remove("show");
-        });
+        close.onclick = e => {
+            modal.querySelector('video').pause();
+            modal.classList.remove("show");
+        };
 
-        modal[0].addEventListener('click', e => {
-            modal[0].getElementsByTagName('video')[0].pause();
-            modal[0].classList.remove("show");
-        });
+        modal.onclick = e => {
+            modal.querySelector('video').pause();
+            modal.classList.remove("show");
+        };
 
-        content[0].addEventListener('click', e => e.stopPropagation())
+        content.onclick = e => e.stopPropagation()
     </script>
 
 </body>
