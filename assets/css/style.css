@@ -238,14 +238,17 @@ body {
 .social-media a {
   width: 30px;
   height: 30px;
-  display: inline-block;
-  text-align: center;
-  line-height: 32px;
+  /* display: inline-block; */
+  /* text-align: center; */
+  /* line-height: 32px; */
   border: 1px solid #000;
   border-radius: 50%;
   margin: 0 5px;
   box-sizing: unset;
   transition: all .15s ease;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .social-media a:hover {
@@ -508,6 +511,11 @@ img {
   position: relative;
 }
 
+.social-media {
+  display: flex;
+  justify-content: center;
+}
+
 .signin-form p.divider {
   margin: 20px 0;
   position: relative;
@@ -549,34 +557,83 @@ nav#sidebarMenu ul {
   margin: 0;
 }
 
-nav#sidebarMenu ul li a {
+nav#sidebarMenu ul li a,
+li.nav-item.has-dropdown span {
   padding: 15px 40px;
   display: flex;
   align-items: center;
   color: #000;
   /* border-left: 10px solid transparent; */
   transition: all 0.15s ease-in-out;
+  cursor: pointer;
 }
 
 nav#sidebarMenu ul li a:hover,
-nav#sidebarMenu ul li a.active {
+nav#sidebarMenu ul li a.active,
+li.nav-item.has-dropdown span:hover,
+li.nav-item.has-dropdown.active span {
   background: #5d5b5a;
   border-color: #fff;
   color: #fff;
 }
 
 nav#sidebarMenu ul li a:hover path,
-nav#sidebarMenu ul li a.active path {
+nav#sidebarMenu ul li a.active path,
+li.nav-item.has-dropdown span:hover path,
+li.nav-item.has-dropdown.active span path {
   fill: #fff;
 }
 
-nav#sidebarMenu ul li a svg {
+nav#sidebarMenu ul li a svg,
+li.nav-item.has-dropdown span svg {
   width: 50px;
   height: 20px;
 }
 
 nav#sidebarMenu ul li a svg path {
   fill: #000;
+}
+
+li.nav-item.has-dropdown span svg.icon {
+  width: auto;
+  height: 8px;
+  position: absolute;
+  right: 20px;
+  stroke: #000;
+  transition: all .5s ease;
+}
+
+li.nav-item.has-dropdown span svg.icon path {
+  stroke: #000;
+  fill: transparent;
+}
+
+li.nav-item.has-dropdown span:hover svg.icon path,
+li.nav-item.has-dropdown.active span svg.icon path {
+  stroke: #fff;
+}
+
+li.nav-item.has-dropdown .dropdown-menu {
+  transition: all .2s ease;
+  max-height: 0;
+  overflow: hidden;
+}
+
+li.nav-item.has-dropdown.active .dropdown-menu {
+  max-height: 1000px;
+}
+
+li.nav-item.has-dropdown.active span svg.icon {
+  transform: rotate(180deg);
+}
+
+li.nav-item.has-dropdown a {
+  padding: 10px 50px !important;
+  font-size: 13px;
+}
+
+li.nav-item.has-dropdown a:hover {
+  background: #888888 !important;
 }
 
 .lms-header a.navbar-brand {
@@ -1406,6 +1463,19 @@ ul.badges li svg {
   }
   .modal.show .modal-content {
     margin-top: 20%;
+  }
+  .signin-form {
+    width: 90%;
+    margin-top: 20%;
+  }
+  .signin-form .col-md-6.text-center {
+    display: none;
+  }
+  .signin .logo {
+    top: 20px;
+  }
+  .signin .logo img {
+    width: 75%;
   }
 }
 
